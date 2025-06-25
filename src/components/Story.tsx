@@ -22,11 +22,6 @@ const imageVariants: Variants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const questionVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } }
-};
-
 const Story = () => {
   return (
     <div className="story-container">
