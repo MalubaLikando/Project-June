@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Project June
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personalized romantic web app — a scrollable love letter built with React, TypeScript, and Framer Motion.
 
-Currently, two official plugins are available:
+## What It Is
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project June is a handcrafted proposal website built to ask one very important question. It tells a story through animated sections, real photos, and personal writing, ending with an interactive prompt: *"Temwani Chiwele, Can I be your boyfriend?"*
 
-## Expanding the ESLint configuration
+If she says yes, she's taken to a celebration page with a FaceTime link ready to go.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Animated storytelling — scroll-triggered Framer Motion animations bring each section to life
+- Photo gallery — a grid of real shared memories
+- Two-route flow — a story page (`/`) and a yes page (`/yes`)
+- Mouse-tracking parallax on the confirmation page
+- Floating particle effects and animated gradient backgrounds
+- WhatsApp fallback for a softer "let's talk" option
+
+## Tech Stack
+
+- React 19 + TypeScript
+- Vite
+- Framer Motion
+- React Router v7
+
+## Running Locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```
+src/
+├── components/
+│   ├── Story.tsx      # Main scrollable love letter page
+│   ├── Story.css
+│   ├── YesPage.tsx    # Celebration page shown after "yes"
+│   └── YesPage.css
+├── assets/images/     # Personal photos used in the gallery
+├── App.tsx            # Route definitions
+└── main.tsx
 ```
