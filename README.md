@@ -2,6 +2,8 @@
 
 A personalized romantic web app — a scrollable love letter built with React, TypeScript, and Framer Motion.
 
+**Live:** https://project-june-1.vercel.app
+
 ## What It Is
 
 Project June is a handcrafted proposal website built to ask one very important question. It tells a story through animated sections, real photos, and personal writing, ending with an interactive prompt: *"Temwani Chiwele, Can I be your boyfriend?"*
